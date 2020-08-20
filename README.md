@@ -1,6 +1,6 @@
 # linksafe
 
-TODO: Write a description here
+Hi! I'm Linksafe and I use a whitelist to block harmful urls in messages.
 
 ## Installation
 
@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      linksafe:
-       github: your-github-user/linksafe
+       github: mixflame/linksafe
    ```
 
 2. Run `shards install`
@@ -20,15 +20,20 @@ TODO: Write a description here
 require "linksafe"
 ```
 
-TODO: Write usage instructions here
+```crystal
+Linksafe.kosher?("http://google.com") #=> true
+Linksafe.kosher_string!("Check this out http://unsafesite.com") #=> "Check this out [link removed]"
+```
+
+`kosher_string!` supports multiple urls being in a string.
 
 ## Development
 
-TODO: Write development instructions here
+Fork, clone, run tests, add domains to whitelist, edit code, run tests, commit, push, pull request.
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/linksafe/fork>)
+1. Fork it (<https://github.com/mixflame/linksafe/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +41,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [your-name-here](https://github.com/your-github-user) - creator and maintainer
+- [Jonathan Silverman](https://github.com/mixflame) - creator and maintainer
