@@ -13,5 +13,6 @@ describe Linksafe do
   it "can detect links in messages and return if kosher" do
     Linksafe.kosher_string!("This is a link to www.google.com").should eq("This is a link to www.google.com")
     Linksafe.kosher_string!("This is a link to www.google.com and www.porn.com").should eq("This is a link to www.google.com and [link removed]")
+    Linksafe.kosher_string!("This is a link to https://youtube.com and www.kink.com and www.google.com").should eq("This is a link to https://youtube.com and [link removed] and www.google.com")
   end
 end
