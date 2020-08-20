@@ -1,6 +1,6 @@
 # linksafe
 
-Hi! I'm Linksafe and I use a whitelist to block harmful urls in messages.
+Hi! I'm Linksafe and I use a domain whitelist to block harmful urls in messages.
 
 ## Installation
 
